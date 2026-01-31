@@ -1,0 +1,4 @@
+To create react app : npx create-react-app name
+Starts the development server : npm start
+Bundles the app into static files for production : npm run build
+starts the test runner : npm test
