@@ -1,0 +1,99 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+  background-color: #f4f6f8;
+  color: #1f2933;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #0f172a;
+}
+
+header h2 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* ===== Main ===== */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  gap:2rem
+}
+
+/* ===== User Card ===== */
+.user-card {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.user-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.user-image img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.user-info p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 16px;
+  background-color: #0f172a;
+}
+
+footer p {
+  color: #cbd5e1;
+  font-size: 14px;
+}

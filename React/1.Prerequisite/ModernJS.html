@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Modern JS</title>
+</head>
+<body>
+
+<!-- <p>The Sum is : </p> -->
+<p id="demo"></p>
+
+
+
+  <script>
+    // import { sub } from './export.js'
+    //normal way to define the function...
+      function add(a,b){
+        return a+b;
+      }
+    //arrow function...
+      const mul = (a,b) => a*b;
+
+      const greet = (name) => {
+        return name;
+      }
+    // Objects
+
+    const Person = {
+      name : "pari",
+      age : 19,
+      city : "Nadiad"
+    }
+
+    // spread operator
+    const a = [1,2]
+    const b = [...a,3,4,5,6]
+
+    // rest operator
+    const sum = (...nums) =>{
+      return nums.reduce((a,b) => a+b);
+    }
+
+    //Array methods
+      //map
+      const doubled = a.map(n => n*2);
+      //filter
+      const even = b.filter(n => n%2 === 0);
+      //reduce
+      const nums = [1, 2, 3];
+      const total = nums.reduce((sum, n) => sum + n, 0);
+      //find
+      let x = nums.find(x => x == 2);
+
+    // Synchronous and Asynchronous in JS..
+    // Synchronous Programming means instruction completing in sequence.....
+    // Asynchronous Programming means few instruction takes time beacuse of which the other instruction takes time to complete it..
+
+//uncomment the code
+    // console.log("one")
+    // console.log("two")
+    
+    // setTimeout(() => {
+    //   console.log("hello")
+    // },5000)//takes callback as argument..
+
+    // console.log("three")
+    
+    //callbacks
+    // means arguments in function are another funciton which cause callback hell problem means goes in nesting  callback..
+
+// uncomment the code
+    // const getData = (dataID,getNextData)  => {
+    //    setTimeout(() => {
+    //     console.log(dataID)
+    //     if(getNextData){
+    //       getNextData()
+    //     }
+    //    },2000)
+    // }
+
+    // //callback hell..(pyramid of doom..)
+    // getData(5,() => {
+    //   getData(10,() => {
+    //     getData(15,()=> {
+    //       getData(20)
+    //     })
+    //   })
+    // })
+    
+    //To solve callback hell problem we have the concept of PROMISIS in JS:
+
+    // Promises[pending,resolve,reject]
+    let promise = new Promise((resolve,reject) => {
+      console.log("i am a promise");
+      // resolve("succes")
+      // reject("error")
+
+    })
+    // .then() and .catch()...
+
+    // async and await
+    async function demo() {
+    console.log("Start");
+
+    await new Promise(resolve =>
+      setTimeout(resolve, 2000)
+      );
+
+      console.log("End");
+    }
+
+    demo();
+    console.log("Outside");
+
+
+
+    // document.getElementById("demo").innerHTML = getData(5);
+  </script>
+
+
+
+</body>
+</html>
